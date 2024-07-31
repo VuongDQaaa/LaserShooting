@@ -6,7 +6,7 @@ public class MapController : MonoBehaviour
     [SerializeField] private List<Transform> spawnEnemyPos;
     [SerializeField] private Transform playerSpawnPos;
     [SerializeField] private GameObject enemyPrefab;
-    [SerializeField] private GameObject playerPrfab;
+    [SerializeField] private GameObject playerPrefab;
     public int currentEnemies;
 
     // Start is called before the first frame update
@@ -41,7 +41,7 @@ public class MapController : MonoBehaviour
 
     private void SpawnPlayer()
     {
-        GameObject player = Instantiate(playerPrfab, transform);
+        GameObject player = Instantiate(playerPrefab, transform);
         Vector3 spawnPos = playerSpawnPos.position;
         spawnPos.y = 1f;
         player.transform.position = spawnPos;

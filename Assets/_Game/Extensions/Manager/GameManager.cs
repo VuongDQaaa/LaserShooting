@@ -59,4 +59,11 @@ public class GameManager : Singleton<GameManager>
             mapController = null;
         }
     }
+
+    public void Restart()
+    {
+        ClearMap();
+        currentGameState = GameState.Playing;
+        SpawnMap();
+    }
 }

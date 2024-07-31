@@ -4,7 +4,7 @@ public class CameraController : Singleton<CameraController>
 {
     [SerializeField] private Transform target;
     [SerializeField] private Vector3 offset;
-    [SerializeField] private float smoothSpeed = 0.125f;
+    //[SerializeField] private float smoothSpeed = 0.125f;
 
 
     // Update is called once per frame
@@ -13,8 +13,8 @@ public class CameraController : Singleton<CameraController>
         if (target != null)
         {
             Vector3 desiredPosition = target.position + offset;
-            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
-            transform.position = smoothedPosition;
+            //Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            transform.position = desiredPosition;
             transform.LookAt(target.position);
         }
     }

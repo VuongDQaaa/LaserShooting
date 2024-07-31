@@ -29,10 +29,10 @@ public class CanvasPause : UICanvas
     private void RestartButton()
     {
         GameManager.Instance.ClearMap();
-        GameManager.Instance.SpawnMap();
         GameManager.Instance.currentGameState = GameState.Playing;
+        GameManager.Instance.SpawnMap();
         UIManager.Instance.OpenUI<CanvasGamePlay>();
-        Close(0);
+        Close(0.5f);
     }
 
     private void MainMenuButton()
