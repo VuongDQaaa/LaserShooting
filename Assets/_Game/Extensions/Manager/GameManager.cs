@@ -1,16 +1,19 @@
+using Unity.AI.Navigation;
 using UnityEngine;
 public enum GameState
 {
     Start = 0,
     Playing = 1,
     Pause = 2,
-    Victory = 3
+    Victory = 3,
+    Loose = 4,
 }
 
 
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private GameObject mapPrefab;
+    [SerializeField] private NavMeshSurface navMeshSurfacePrefab;
     private MapController mapController;
     public GameState currentGameState;
     public int currentEnemies;
@@ -43,12 +46,10 @@ public class GameManager : Singleton<GameManager>
 
     public void SpawnMap()
     {
-        if (currentGameState == GameState.Playing)
-        {
-            GameObject sapwnedMap = Instantiate(mapPrefab);
-            mapController = sapwnedMap.GetComponent<MapController>();
-            currentEnemies = mapController.currentEnemies;
-        }
+        GameObject sapwnedMap = Instantiate(mapPrefab);
+        mapController = sapwnedMap.GetComponent<MapController>();
+        Instantiate(navMeshSurfacePrefab);
+        currentEnemies = mapController.currentEnemies;
     }
 
     public void ClearMap()

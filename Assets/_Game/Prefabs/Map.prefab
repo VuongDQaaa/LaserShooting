@@ -1193,7 +1193,7 @@ MonoBehaviour:
   - {fileID: 4423945576979672095}
   - {fileID: 6200142718645063816}
   playerSpawnPos: {fileID: 1037591388098651329}
-  enemyPrefab: {fileID: 6033536924602661164, guid: 95f7dae8e069a984db5d55fd2558232d, type: 3}
+  enemyPrefab: {fileID: 1224534297979891039, guid: 95f7dae8e069a984db5d55fd2558232d, type: 3}
   playerPrefab: {fileID: 581410332012262538, guid: 8b7a377f71662794da1748de188a13a9, type: 3}
   currentEnemies: 0
 --- !u!1 &3949214755622197637

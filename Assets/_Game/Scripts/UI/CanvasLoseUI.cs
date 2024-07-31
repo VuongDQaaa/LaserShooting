@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CanvasWin : UICanvas
+public class CanvasLoseUI : UICanvas
 {
  [SerializeField] private Button restartButton, mainMenuButton;
 

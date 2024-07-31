@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LaserController : MonoBehaviour
@@ -22,7 +20,10 @@ public class LaserController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Attack();
+        if (GameManager.Instance.currentGameState == GameState.Playing)
+        {
+            Attack();
+        }
     }
 
     private void Attack()
@@ -85,9 +86,6 @@ public class LaserController : MonoBehaviour
                     {
                         break;
                     }
-
-                    //Hit Effect
-                    //GenerateEffect();
                     currentPos = hit.point;
                 }
                 else
@@ -108,23 +106,7 @@ public class LaserController : MonoBehaviour
         }
     }
 
-//TODO effect when hit and shoot laser
-    // private void GenerateEffect(ParticleSystem effect, Vector3 postion)
-    // {
-    //     GameObject newEffect = Instantiate(effect.gameObject);
-    //     generatedEffects.Add(newEffect);
-    //     newEffect.transform.position = postion;
-    // }
-
-    // private void ClearEffect()
-    // {
-    //     foreach (GameObject effect in generatedEffects)
-    //     {
-    //         Destroy(effect);
-    //     }
-    //     generatedEffects.Clear();
-    // }
-
+    //TODO effect when hit and shoot laser
     private void DamageEnemy(EnemyController enemyController)
     {
         timeCounter += Time.deltaTime;

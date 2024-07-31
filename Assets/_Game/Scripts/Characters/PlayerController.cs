@@ -48,13 +48,20 @@ public class PlayerController : MonoBehaviour
 
     private void MovePlayer()
     {
-        //move player
-        Vector3 movingDirection = moveDirection.normalized * moveSpeed * Time.deltaTime;
-        Vector3 nextPos = transform.position + movingDirection;
-        rb.MovePosition(nextPos);
+        if (GameManager.Instance.currentGameState == GameState.Playing)
+        {
+            //move player
+            Vector3 movingDirection = moveDirection.normalized * moveSpeed * Time.deltaTime;
+            Vector3 nextPos = transform.position + movingDirection;
+            rb.MovePosition(nextPos);
 
-        //Rotate player
-        RotatePlayer();
+            //Rotate player
+            RotatePlayer();
+        }
+        else
+        {
+            rb.MovePosition(transform.position);
+        }
     }
 
     private void RotatePlayer()
@@ -75,6 +82,22 @@ public class PlayerController : MonoBehaviour
             {
                 Quaternion lookRotation = Quaternion.LookRotation(direction);
                 tankTurret.rotation = Quaternion.Slerp(tankTurret.rotation, lookRotation, Time.deltaTime * rotateSpeed);
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag(Constant.ENEMY_TAG_NAME))
+        {
+            EnemyController enemyController = other.transform.GetComponent<EnemyController>();
+            if (enemyController != null)
+            {
+                if (!enemyController.isDead)
+                {
+                    GameManager.Instance.currentGameState = GameState.Loose;
+                    UIManager.Instance.OpenUI<CanvasLoseUI>();
+                }
             }
         }
     }

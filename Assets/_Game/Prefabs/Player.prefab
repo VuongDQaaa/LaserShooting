@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2601878527856290769}
   - component: {fileID: 9143513617416042522}
   - component: {fileID: 3760564361666058664}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5616227534761495840}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sample tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 7436623799630720507}
   - component: {fileID: 4090203194188230332}
   - component: {fileID: 2755324377940953701}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 8888212448394540652}
   - component: {fileID: 6813423162552857642}
   - component: {fileID: 6717294529861677972}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fire Pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,7 +403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6298814260181115800}
   - component: {fileID: 7321322117914613854}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 670148530585638860}
   - component: {fileID: 996850908624887661}
   - component: {fileID: 4754555079955553699}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 7526670171676496877}
   - component: {fileID: 5350761220850086950}
   - component: {fileID: 6799852071389105267}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,7 +730,7 @@ GameObject:
   - component: {fileID: 5457262990117938006}
   - component: {fileID: 254759237065803021}
   - component: {fileID: 1128051090355286476}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -817,8 +817,28 @@ PrefabInstance:
       value: FireBeamStart
       objectReference: {fileID: 0}
     - target: {fileID: 101350, guid: ea72aca1214b2ab4daca57345d563d07, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 101350, guid: ea72aca1214b2ab4daca57345d563d07, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114174, guid: ea72aca1214b2ab4daca57345d563d07, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 131392, guid: ea72aca1214b2ab4daca57345d563d07, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 131928, guid: ea72aca1214b2ab4daca57345d563d07, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 171212, guid: ea72aca1214b2ab4daca57345d563d07, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 495476, guid: ea72aca1214b2ab4daca57345d563d07, type: 3}
       propertyPath: m_LocalPosition.x
